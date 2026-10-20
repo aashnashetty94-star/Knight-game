@@ -50,6 +50,7 @@ script = ExtResource("1_g2els")
 sprite_frames = SubResource("SpriteFrames_51fql")
 autoplay = "default"
 frame_progress = 0.8401503
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1345399707]
 z_index = 5
