@@ -17,6 +17,12 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
+	if direction==0:
+		animated_sprite.play("idle")
+	elif Input.is_action_pressed("jump") and is_on_floor:
+		animated_sprite.play("jump")
+	else:
+		animated_sprite.play("run")
 	if direction ==-1:
 		animated_sprite.flip_h=true;
 	else:
