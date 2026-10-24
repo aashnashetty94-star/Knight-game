@@ -141,6 +141,9 @@ You have collected x coins"
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="Timer" type="Timer" parent="game_manager" unique_id=1158659518]
+wait_time = 1.5
+
 [node name="Node" type="Node" parent="." unique_id=636870443]
 
 [node name="Label" type="Label" parent="Node" unique_id=118350491]
@@ -163,3 +166,5 @@ text = "Press space to jump
 "
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[connection signal="timeout" from="game_manager/Timer" to="game_manager" method="_on_timer_timeout"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://caw8l0xpoc724" path="res://assests/166a5ca5-e626-4179-ae4b-2925b2031455.png" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://ceb4cp0b7bxsm" path="res://assests/fonts/PixelOperator8.ttf" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://bbjg5sy7d1ull" path="res://script/main_menu.gd" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://c3hdicnjmu2ff" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dcu6l"]
@@ -53,6 +54,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wu84c")
 
 [node name="Panel" type="Panel" parent="." unique_id=788881187]
 layout_mode = 1
@@ -145,3 +147,7 @@ theme_override_fonts/font = ExtResource("3_bqqt6")
 theme_override_font_sizes/font_size = 56
 text = "Dragon Slayer"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
